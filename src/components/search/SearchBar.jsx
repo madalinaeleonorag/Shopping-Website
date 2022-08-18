@@ -1,6 +1,6 @@
 import "./SearchBar.scss";
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   return (
     <>
       <div className="search">
@@ -10,7 +10,13 @@ const SearchBar = () => {
             alt="search icon"
             className="search-bar-icon"
           />
-          <input type="text" className="search-bar-input" />
+          <input
+            type="text"
+            className="search-bar-input"
+            onChange={() => {
+              props.setSearchText(event.target.value);
+            }}
+          />
         </div>
       </div>
     </>
