@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import "./App.scss";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <div className="header">
+        <div className="title">Perfumes</div>
+        <div className="cart">Cart</div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <div className="searchbar">
+        <img
+          src="./assets/icons/search.png"
+          alt="search icon"
+          className="search-icon"
+        />
+        <input type="text" className="search-input" />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <div className="items-list">
+        <div className="card">
+          <img
+            src="./assets/images/dior-poison.jpeg"
+            alt="dior poison perfume"
+            className="card-image"
+          />
+          <div className="card-title">Dior Hypnotic Poison</div>
+          <div className="card-price">438 RON</div>
+          <button className="card-button">Add to cart</button>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
