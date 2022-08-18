@@ -1,0 +1,27 @@
+.search {
+  display: flex;
+  justify-content: center;
+  margin: 5vh 0;
+
+  &-bar {
+    display: flex;
+    background-color: white;
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 5px;
+    align-items: center;
+
+    &-icon {
+      height: 3vh;
+      padding: 0.5vh 1vw;
+    }
+
+    &-input {
+      height: 3vh;
+      border: none;
+      border-left: 1px solid black;
+      min-width: 30vw;
+      margin-right: 1vw;
+    }
+  }
+}

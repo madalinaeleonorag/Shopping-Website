@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightyellow;
+  padding: 2vw 2vh;
+
+  .title {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .cart {
+    height: 4vh;
+  }
+}
