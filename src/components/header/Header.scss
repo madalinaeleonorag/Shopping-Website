@@ -5,15 +5,33 @@
   padding: 2vw 2vh;
   align-items: center;
 
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
   .title {
     font-weight: bold;
     font-size: 2.5rem;
     font-family: cursive;
     cursor: pointer;
+
+    &:hover {
+      color: darkkhaki;
+    }
   }
 
   .cart {
-    height: 4vh;
-    cursor: pointer;
+    display: flex;
+    flex-flow: row;
+
+    &-logo {
+      height: 4vh;
+      cursor: pointer;
+    }
+    &-counter {
+      vertical-align: top;
+      color: darkslategrey;
+    }
   }
 }
