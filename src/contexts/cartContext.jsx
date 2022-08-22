@@ -6,18 +6,18 @@ const CartContext = React.createContext({
 });
 
 export const CartProvider = ({ children }) => {
-  const [cartItems, setState] = useState({
-    items: [],
-    addItem: (item) => {
-      const listOfItems = cartItems;
-      listOfItems.items.push(item);
-      setState(listOfItems);
-      console.log("cartContext cartItems = ", cartItems);
-    },
-  });
+  const [cartItems, setState] = useState([]);
+
+  const setCartItems = (item) => {
+    const listOfItems = cartItems;
+    listOfItems.push(item);
+    setState(listOfItems);
+  };
 
   return (
-    <CartContext.Provider value={cartItems}>{children}</CartContext.Provider>
+    <CartContext.Provider value={{ cartItems, setCartItems }}>
+      {children}
+    </CartContext.Provider>
   );
 };
 

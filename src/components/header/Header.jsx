@@ -4,14 +4,15 @@ import { CartState } from "../../contexts/cartContext";
 import "./Header.scss";
 
 const Header = () => {
-  const { items } = CartState();
+  const { cartItems } = CartState();
   const [numberOfItems, setNumberOfItems] = useState(0);
   console.log("numberOfItems = ", numberOfItems);
+  console.log("cartItems = ", cartItems);
 
   useEffect(() => {
-    console.log("useEffect items = ", items);
-    setNumberOfItems(items?.length);
-  }, [numberOfItems]);
+    console.log("useEffect cartItems = ", cartItems);
+    setNumberOfItems(cartItems?.length);
+  }, [numberOfItems, cartItems]);
 
   return (
     <>
@@ -25,7 +26,7 @@ const Header = () => {
             alt="cart logo"
             className="cart-logo"
           />
-          <div className="cart-counter">({items.length})</div>
+          <div className="cart-counter">({cartItems?.length})</div>
         </Link>
       </div>
     </>
