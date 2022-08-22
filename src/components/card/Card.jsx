@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
-import CartContext from "../../context/cartContext";
+import React from "react";
+import { CartState } from "../../contexts/cartContext";
 import "./Card.scss";
 
 const Card = ({ productObject }) => {
-  const { addItem } = useContext(CartContext);
+  const { addItem } = CartState();
 
   return (
     <>

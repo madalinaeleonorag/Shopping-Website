@@ -1,15 +1,12 @@
 import "./SearchBar.scss";
+import SearchLogo from "../../assets/icons/search.png";
 
 const SearchBar = (props) => {
   return (
     <>
       <div className="search">
         <div className="search-bar">
-          <img
-            src="https://www.pngall.com/wp-content/uploads/8/Magnifying-Glass-Search-PNG-High-Quality-Image.png"
-            alt="search icon"
-            className="search-bar-icon"
-          />
+          <img src={SearchLogo} alt="search icon" className="search-bar-icon" />
           <input
             type="text"
             className="search-bar-input"

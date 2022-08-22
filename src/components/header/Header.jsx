@@ -1,12 +1,18 @@
-import React, { useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import CartContext from "../../context/cartContext";
+import { CartState } from "../../contexts/cartContext";
 import "./Header.scss";
 
 const Header = () => {
-  // TODO
-  // const { items } = useContext(CartContext);
-  // console.log(items);
+  const { items } = CartState();
+  const [numberOfItems, setNumberOfItems] = useState(0);
+  console.log("numberOfItems = ", numberOfItems);
+
+  useEffect(() => {
+    console.log("useEffect items = ", items);
+    setNumberOfItems(items?.length);
+  }, [numberOfItems]);
+
   return (
     <>
       <div className="header">
@@ -19,7 +25,7 @@ const Header = () => {
             alt="cart logo"
             className="cart-logo"
           />
-          {/* <div className="cart-counter">({items})</div> */}
+          <div className="cart-counter">({items.length})</div>
         </Link>
       </div>
     </>
