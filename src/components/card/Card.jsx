@@ -1,17 +1,28 @@
+import React, { useContext } from "react";
+import CartContext from "../../context/cartContext";
 import "./Card.scss";
 
-const Card = (props) => {
+const Card = ({ productObject }) => {
+  const { addItem } = useContext(CartContext);
+
   return (
     <>
       <div className="card">
         <img
-          src={props.productObject.image}
-          alt={props.productObject.name}
+          src={productObject.image}
+          alt={productObject.name}
           className="card-image"
         />
-        <div className="card-title">{props.productObject.name}</div>
-        <div className="card-price">{props.productObject.price} RON</div>
-        <button className="card-button">Add to cart</button>
+        <div className="card-title">{productObject.name}</div>
+        <div className="card-price">{productObject.price} RON</div>
+        <button
+          className="card-button"
+          onClick={() => {
+            addItem(productObject);
+          }}
+        >
+          Add to cart
+        </button>
       </div>
     </>
   );

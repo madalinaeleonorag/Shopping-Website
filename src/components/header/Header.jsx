@@ -1,7 +1,12 @@
-import "./Header.scss";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+// import CartContext from "../../context/cartContext";
+import "./Header.scss";
 
 const Header = () => {
+  // TODO
+  // const { items } = useContext(CartContext);
+  // console.log(items);
   return (
     <>
       <div className="header">
@@ -14,7 +19,7 @@ const Header = () => {
             alt="cart logo"
             className="cart-logo"
           />
-          <div className="cart-counter">(5)</div>
+          {/* <div className="cart-counter">({items})</div> */}
         </Link>
       </div>
     </>
