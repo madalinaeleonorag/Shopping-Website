@@ -3,7 +3,7 @@ import { CartState } from "../../contexts/cartContext";
 import "./Card.scss";
 
 const Card = ({ productObject }) => {
-  const { setCartItems } = CartState();
+  const { addCartItem } = CartState();
 
   return (
     <>
@@ -18,7 +18,7 @@ const Card = ({ productObject }) => {
         <button
           className="card-button"
           onClick={() => {
-            setCartItems(productObject);
+            addCartItem(productObject);
           }}
         >
           Add to cart
