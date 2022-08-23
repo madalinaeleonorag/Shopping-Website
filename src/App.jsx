@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { CartProvider } from "./contexts/cartContext";
 import Header from "./components/header/Header";

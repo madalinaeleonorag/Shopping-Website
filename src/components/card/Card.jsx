@@ -1,4 +1,3 @@
-import React from "react";
 import { CartState } from "../../contexts/cartContext";
 import "./Card.scss";
 
