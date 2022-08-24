@@ -1,3 +1,4 @@
+import { QUANTITY, RON } from "../../assets/copy";
 import "./CartItem.scss";
 
 const CartItem = ({ item }) => {
@@ -13,9 +14,11 @@ const CartItem = ({ item }) => {
         </div>
         <div className="cart-item-right">
           <div className="cart-item-right-quantity">
-            Quantity: {item.quantity}
+            {QUANTITY}: {item.quantity}
           </div>
-          <div className="cart-item-right-price">{item.price} RON</div>
+          <div className="cart-item-right-price">
+            {item.price} {RON}
+          </div>
         </div>
       </div>
     </>

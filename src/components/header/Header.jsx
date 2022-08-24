@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { PAGE_TITLE } from "../../assets/copy";
 import { CartState } from "../../contexts/cartContext";
 import "./Header.scss";
 
@@ -9,7 +10,7 @@ const Header = () => {
     <>
       <div className="header">
         <Link to="/">
-          <div className="title">&#62; Perfumes</div>
+          <div className="title">&#62; {PAGE_TITLE}</div>
         </Link>
         <Link to="cart" className="cart">
           <img

@@ -1,7 +1,7 @@
 import "./SearchBar.scss";
 import SearchLogo from "../../assets/icons/search.png";
 
-const SearchBar = (props) => {
+const SearchBar = ({ setSearchText }) => {
   return (
     <>
       <div className="search">
@@ -11,7 +11,7 @@ const SearchBar = (props) => {
             type="text"
             className="search-bar-input"
             onChange={() => {
-              props.setSearchText(event.target.value);
+              setSearchText(event.target.value);
             }}
           />
         </div>
