@@ -10,7 +10,7 @@ Basic React + Hooks + Context shopping website
 
 - Cart
 
-![Cart](src/assets/cart-demo.png?raw=true "Cart")
+![Cart](src/assets/cart-items-demo.png?raw=true "Cart")
 
 - No items screen
 
