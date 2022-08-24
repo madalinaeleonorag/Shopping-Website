@@ -17,7 +17,7 @@ const Header = () => {
             alt="cart logo"
             className="cart-logo"
           />
-          <div className="cart-counter">({numberOfItems})</div>
+          <div className="cart-counter">({numberOfItems || 0})</div>
         </Link>
       </div>
     </>

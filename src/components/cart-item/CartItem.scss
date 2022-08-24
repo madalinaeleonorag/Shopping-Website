@@ -1,0 +1,48 @@
+.cart-item {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin: 1vh 0;
+  padding: 1vh 2vw;
+
+  &-left {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    img {
+      height: 15vh;
+    }
+
+    &-image {
+      height: 15vh;
+      width: 15vh;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &-name {
+      font-size: 1.5rem;
+      padding-left: 2vw;
+      font-weight: bold;
+    }
+  }
+
+  &-right {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    &-quantity {
+      padding-right: 2vw;
+      font-style: italic;
+    }
+
+    &-price {
+      color: darkgrey;
+    }
+  }
+}
